@@ -23,7 +23,7 @@
     <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
     <!--css読み込み-->
-    <link rel="stylesheet" href="css/<!--cssファイル名-->">
+    <link rel="stylesheet" href="css/javadrive_php__study.css">
     
     
     <!--＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿-->
@@ -58,6 +58,73 @@
         echo "東京都{$area}";
         ?>
         </p>
+
+        <p>
+        <?php
+        echo "私の名前は\"本田\"です<br>";
+        echo '私の名前は\'近藤\'です<br>';
+        ?>
+        </p>
+
+        
+        <?php
+        echo "こんにちは!\nお元気ですか<br>";
+        ?>
+        
+        <br>
+        
+        <?php
+        echo <<<LABEL
+        こんにちは<br>
+        私の名前は本田です
+        LABEL;
+        ?>
+        <br>
+
+        <?php echo <<<END
+        I'm a student.
+        I go to "school" by bus.
+        END;
+        ?>
+
+        <p>
+          <?php
+          print 18;
+          print '<br>';
+          echo -3.14E-2;
+          ?>
+        </p>
+
+        <?php
+        echo 8+3, "<br>";
+
+        echo 6-2, "<br>";
+        
+        echo 4*7, "<br>";
+        
+        echo 12/4, "<br>";
+        
+        echo 5%3, "<br>";
+        
+        ?>
+
+        <?php
+        echo "8 + 3 = ", 8 + 3, '<br>';
+        echo "6 - 2 = ", 6 - 2, '<br>';
+        echo "4 * 7 = ", 4 * 7, '<br>';
+        echo "12 / 4 = ", 12 / 4, '<br>';
+        echo "5 % 3 = ", 5 % 3, '<br>';
+
+        echo 4/2*2, '<br>';
+        echo 5+4*3, '<br>';
+        echo (5+4)*3, '<br>';
+        echo 2*((5+3)*4-(4+5)/3), '<br>';
+
+        echo "5 + 3 * 4 = ", 5 + 3 * 4, '<br>';
+        echo "(5 + 3) * 4 = ", (5 + 3) * 4, '<br>';
+        ?>
+
+      </main>
         
       </main>
       
@@ -70,4 +137,60 @@
 </html>
 
 <!-- http://localhost/javadrive_php__study -->
+
+<!-- 数値と四則演算
+演算の際の型変換からスタート -->
+
+<!-- 私の特性なのか
+コツコツ積み重ねて力をつけていくやり方の方が
+スキルが身に付くように感じています
+ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+今日もPHPを学んでいます
+自身で新しいwebサイトを作成していましたが
+そこで感じたことは
+まだまだ理解が足りないということでした
+
+基礎の部分を
+今までとは違う角度から
+学び直しています
+
+芋虫が蛹をすっ飛ばして蝶にはなれないように
+スキル習得には順序があるな～と感じました
+
+たまたま出来たでは再現性が低いと感じるので
+シッカリ意味を理解した上で
+分かりやすく美しいコードを書けるように
+今は焦らずコツコツやっていこうと思います
+
+#2_20_2023
+#プログラミング
+#プログラマー
+#プログラマー女子!?
+#プログラマー初心者
+#アウトプット
+#computerprogrammer
+#javascript
+#jquery
+#html
+#css
+#ブログ
+#codestep
+#模写
+#progate
+#プロゲート
+#pexels
+#サーバー
+#エックスサーバー
+#アップロード
+#ポートフォリオ
+#git
+#github
+#vscode
+#タスク管理
+#プロジェクト管理
+#php
+#
+
+
+ -->
 
