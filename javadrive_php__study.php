@@ -124,6 +124,30 @@
         echo "(5 + 3) * 4 = ", (5 + 3) * 4, '<br>';
         ?>
 
+        <br>
+        <br>
+
+        <?php
+        $name = '加藤';
+        print $name;
+
+        print '<br>';
+
+        $num = 20;
+        print $num * 9;
+
+        print '<br>';
+
+        $name = '遠藤';
+        print $name;
+
+        print '<br>';
+
+        print $name;
+
+        print '<br>';
+        ?>
+
       </main>
         
       </main>
@@ -138,5 +162,5 @@
 
 <!-- http://localhost/javadrive_php__study -->
 
-<!-- 数値と四則演算
-演算の際の型変換からスタート -->
+<!-- 変数
+変数の初期化とNULLからスタート -->
