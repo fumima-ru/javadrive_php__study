@@ -127,25 +127,33 @@
         <br>
         <br>
 
+        <p>2/24</p>
+
         <?php
-        $name = '加藤';
-        print $name;
+        $var = '高橋';
+        print '[値]'.$var.',';
+        print '[型]'.gettype($var).'<br>';
 
-        print '<br>';
+        $var = 180;
+        print '[値]'.$var.',';
+        print '[型]'.gettype($var).'<br>';
 
-        $num = 20;
-        print $num * 9;
+        ?>
 
-        print '<br>';
+        <br>
 
-        $name = '遠藤';
-        print $name;
+        <?php
+        $num1 = 320;
+        $num2 = $num1;
+        
+        echo '$num1 ='.$num1,'<br>';
+        echo '$num2 ='.$num2,'<br>';
 
-        print '<br>';
+        $num1 = 18;
+        echo '$num1 ='.$num1,'<br>';
+        echo '$num2 ='.$num2,'<br>';
 
-        print $name;
 
-        print '<br>';
         ?>
 
       </main>
@@ -163,4 +171,4 @@
 <!-- http://localhost/javadrive_php__study -->
 
 <!-- 変数
-変数の初期化とNULLからスタート -->
+変数を参照からスタート -->
