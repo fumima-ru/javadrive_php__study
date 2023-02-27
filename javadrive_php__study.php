@@ -140,22 +140,58 @@
 
         ?>
 
+        <br><br>
+
+        <p>【プレビュー】</p>
+
+        <br>
+
+        <h1><!-- 変数を代入(変数 = 他の変数) --></h1>
+        <?php
+        $num = 40;
+        print '$num = '.$num.'<br>';
+
+        $num += 25;
+        print '$num = '.$num.'<br>';
+
+        $str = '福岡';
+        print '$str = '.$str.'<br>';
+
+        $str .= '支店';
+        print '$str = '.$str.'<br>'; 
+        ?>
+
+        <br><br>
+
+        <p>【プレビュー】</p>
+
         <br>
 
         <?php
-        $num1 = 320;
-        $num2 = $num1;
-        
-        echo '$num1 ='.$num1,'<br>';
-        echo '$num2 ='.$num2,'<br>';
+        /* 定数の定義(define(識別子, 値);) */
+        define('PI', 3.14);
 
-        $num1 = 18;
-        echo '$num1 ='.$num1,'<br>';
-        echo '$num2 ='.$num2,'<br>';
-
-
+        $radius = 7;
+        $area = PI * $radius * $radius;
+        print '半径が'.$radius.'cmの面積は'.$area.'㎠です'.'<br>';
         ?>
 
+        <br><br>
+
+        <?php
+        $old = 25;
+        if ($old >= 20) {
+          print '年齢は２０歳以上です';
+        }
+        ?>
+
+        <?php
+        $tosi = 30;
+        ?>
+        <?php if ($tosi <= 30): ?>
+          <p><?php print '年齢は３０歳以下です';?></p>
+        <?php endif ?>
+        
       </main>
         
       </main>
@@ -170,5 +206,5 @@
 
 <!-- http://localhost/javadrive_php__study -->
 
-<!-- 変数
-変数を参照からスタート -->
+<!-- 条件分岐
+倫理値からスタート -->

@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+html {
+  font-size: 100%;
+}
+
+body {
+  color: #050507;
+  font-size: 1rem;
+  /*font-family: ;*/
+}
+img {
+  max-width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: #050507;
+  text-decoration: none;
+}
+
+/* --#header----------------------- */
+/* --ハンバーガーメニュー------------ */
+/* --#mainvisual------------------- */
+/* --#information------------------ */
+/* --#access----------------------- */
+/* --#contact---------------------- */
+/* --#footer----------------------- */
+/* --レスポンシブ------------------- */
+/* --レスポンシブ#information------- */
+/* --レスポンシブ#access------------ */
+/* --レスポンシブ#contact----------- */
+/* --レスポンシブ#footer------------ */
+
+/* --やることリスト----------------- */
+
+
+.container {
+  margin-left: 30px;
+}
+
+h1 {
+  font-size: 20PX;
+}
+
+footer {
+  margin-top: 100px;
+}
