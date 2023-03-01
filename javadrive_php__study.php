@@ -191,10 +191,72 @@
         <?php if ($tosi <= 30): ?>
           <p><?php print '年齢は３０歳以下です';?></p>
         <?php endif ?>
+
+        <br><br>
+
+        <?php
+        if (True) {
+          print '条件式にTRUEが記述されているので常に実行されます';
+        }
+        ?>
+
+        <br><br>
+
+        <?php
+        $num_comparison = 20;
+        if ($num_comparison == 20) {
+          print "変数の値は20と等しい<br>";
+        }
+        ?>
+
+        <?php
+        $var1 = 208;
+        if ($var1 == 208) {
+          print '変数の値は208と等しい<br>';
+        }
+
+        $var1 = 12;
+        $var2 = '12';
+        if ($var1 == $var2) {
+          print "12 == '12'はTRUEです<br>";
+        }
+
+        $var1 = 'Tokyo';
+        if ($var1 == 'Tokyo') {
+          print '変数の値はTokyoと等しい<br>';
+        }
+
+        $num_operator = '20';
+        if ($num_operator !== 20) {
+          print '変数の値は数値20と等しくない<br>';
+        }
+
+        $var_test = 208;
+        if ($var_test === 208) {
+          print '変数の値は数値の208です<br>';
+        }
+
+        $var_test = 12;
+        $var_test2 = '12';
+        if ($var_test === $var_test2) {
+          print "12 === '12'はTRUEです<br>";
+        } else {
+          print "12 === '12'はFALSEです<br>";
+        }
+
+        $var_test = 'Tokyo';
+        if ($var_test === 'Tokyo') {
+          print '変数$var_testの値は文字列のTokyoです';
+        } else {
+          print '変数$var_testの値は文字列のTokyoではありません';
+        }
+
+        ?>
+
+        
         
       </main>
         
-      </main>
       
       <!--#footer-------------------------->
       <footer id="footer" class="wrapper">
@@ -207,4 +269,4 @@
 <!-- http://localhost/javadrive_php__study -->
 
 <!-- 条件分岐
-倫理値からスタート -->
+比較演算子の 大小の比較からスタート -->
