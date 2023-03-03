@@ -246,14 +246,185 @@
 
         $var_test = 'Tokyo';
         if ($var_test === 'Tokyo') {
-          print '変数$var_testの値は文字列のTokyoです';
+          print '変数$var_testの値は文字列のTokyoです<br>';
         } else {
-          print '変数$var_testの値は文字列のTokyoではありません';
+          print '変数$var_testの値は文字列のTokyoではありません<br>';
         }
 
         ?>
 
+        <?php
+        print $num;
+        print '<br>';
+        $num = 30;
+        if ($num >= 30) {
+          print '変数numの値は30以上<br>';
+        } else {
+          print '変数numの値は30よりも小さい<br>';
+        }
+        print $num;
+        print '<br>';
         
+        ?>
+
+        <?php
+
+        print $var1;
+        print '<br>';
+        $var1 = 21;
+        print '<br>';
+        if ($var1 < 30) {
+          print '変数の値は３０より小さい<br>';
+        }
+
+        $var1 = 'Tokyo';
+        $var2 =  'Osaka';
+        if ($var1 > $var2) {
+          print 'TokyoはOsakaより大きい<br>';
+        } else {
+          print 'TokyoはOsakaより小さい<br>';
+        }
+
+        $old = 25;
+        $pref = '東京';
+        if ($old >= 20 && $pref == '東京') {
+          print '東京出身で20歳以上です<br>';
+        }
+
+        $math = 45;
+        $english = 82;
+        if ($math > 50 || $english > 50) {
+          print '合格です<br>';
+        } else {
+          print '残念ながら不合格です<br>';
+        }
+
+        $math = 42;
+        $english = 39;
+        print '数学:'.$math.',英語:'.$english.'<br>';
+        if ($math > 50 || $english > 50) {
+          print '合格です<br>';
+        } else {
+          print '不合格です<br>';
+        }
+
+        $math = 45;
+        $english = 82;
+        if ($math < 50 xor $english < 50) {
+          print '補習です<br>';
+        }
+
+        $math = 45;
+        $english = 82;
+        if ($math < 50 xor $english < 50) {
+          print '補習を受けて下さい<br>';
+        }
+
+        $pref = '大阪';
+        if(!($pref == '東京')) {
+          print '東京以外にお住いの方<br>';
+        }
+
+        $old = 18;
+        if ($old >= 20)
+          print '20歳以上です<br>';
+        else
+          print '20歳未満です<br>';
+
+        print '年齢:'.$old.'<br>';
+        if ($old >= 20) {
+          print '年齢は20歳以上です<br>';
+        } else {
+          print '年齢は20歳未満です<br>';
+        }
+
+        $old = 45;
+        print '年齢:'.$old.'<br>';
+        if ($old >= 20) {
+          print '年齢は20歳以上です<br>';
+        } else {
+          print '年齢は20歳未満です<br>';
+        }
+
+        $domain = 'jp';
+        if ($domain == 'in') {
+          print 'インドのトップレベルドメイン<br>';
+        } elseif ($domain == 'cn') {
+          print '中国のトップレベルドメイン<br>';
+        } elseif ($domain == 'jp') {
+          print '日本のトップレベルドメイン<br>';
+        } else {
+          print '不明です<br>';
+        }
+
+        $pref = '千葉';
+        if ($pref == '東京') {
+          print "住まいは{$pref}です<br>";
+        } elseif ($pref == '大阪') {
+          print "住まいは{$pref}です<br>";
+        } elseif ($pref == '京都') {
+          print "住まいは{$poref}です<br>";
+        } elseif ($pref == '福岡') {
+          print "住まいは{$pref}です<br>";
+        } elseif ($pref == '千葉') {
+          print "住まいは{$pref}です<br>";
+        } else {
+          print "住まいは未記入です<br>";
+        }
+
+        switch ($pref) {
+        case '東京':
+          print "住まいは{$pref}です<br>";
+          break;
+        case '大阪':
+          print "住まいは{$pref}です<br>";
+          break;
+        case '京都':
+          print "住まいは{$pref}です<br>";
+          break;
+        case '福岡':
+          print "住まいは{$pref}です<br>";
+          break;
+        case '千葉':
+          print "住まいは{$pref}です<br>";
+          break;
+        default:
+          print "住まいは未記入です<br>";
+        }
+
+        $number = 7;    
+        switch ($number) {
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+        case 6:
+        case 7:
+        case 8:
+          print "{$number}です<br>";
+          break;
+        default:
+          print '数値は1～8以外です';
+        }
+
+        $domain = 'cn';
+        print 'ドメイン:'.$domain.'<br>';
+        switch ($domain) {
+        case 'in':
+          print 'インドのトップレベルドメイン<br>';
+          break;
+        case 'cn':
+          print '中国のトップレベルドメイン<br>';
+          break;
+        case 'jp':
+          print '日本のトップレベルドメイン<br>';
+          break;
+        default:
+          print '不明です';
+        }
+
+        ?>
         
       </main>
         
@@ -269,4 +440,4 @@
 <!-- http://localhost/javadrive_php__study -->
 
 <!-- 条件分岐
-比較演算子の 大小の比較からスタート -->
+三項演算子からスタート -->
