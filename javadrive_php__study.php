@@ -424,6 +424,43 @@
           print '不明です';
         }
 
+        print '<br><br>';
+
+        print '【プレビュー】<br>';
+
+
+        
+        $lang = 'En';
+        $msg = $lang == 'jp' ? 'こんにちは' : 'Hello';
+        print $msg.'<br>';
+
+        $lang ='Jp';
+        print $lang == 'Jp' ? 'こんにちは' : 'Hello';
+        print '<br>';
+
+        $num = 0;
+        while ($num < 2) {
+          print "num=".$num;
+          $num += 1;
+          print '<br>';  
+        }
+
+        $num = 0;
+        while ($num < 3) {
+          print 'num = '.$num.'<br>';
+          $num += 1;
+        }
+
+        $i = 0;
+        while ($i < 3) {
+          $j = 0;
+          while ($j < 3) {
+            print '(i, j)=('.$i.','.$j.')<br>';
+            $j += 1;
+          }
+          $i += 1;
+        }
+
         ?>
         
       </main>
@@ -439,5 +476,5 @@
 
 <!-- http://localhost/javadrive_php__study -->
 
-<!-- 条件分岐
-三項演算子からスタート -->
+<!-- 繰り返し処理
+breakからスタート -->
