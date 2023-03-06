@@ -461,7 +461,96 @@
           $i += 1;
         }
 
+        print '<br><br><br>';
+
+        $count = 1;
+        $sum =0;
+        while ($count <= 100) {
+          $sum += $count;
+
+          if ($sum > 1000) {
+            print '1000を越えたので count ='.$count.'で終了します<br>';
+            break;
+          }
+          $count += 1;
+        }
+
+        print 'sum= '.$sum;
+        print '<br><br>';
+
+
+
+
+        print '【プレビュー】<br>';
+        print '-----------------<br>';
+
+        $i = 1;
+        while ($i < 5) {
+          $j = 1;
+
+          /* breakによって抜けるループ */
+          while ($j < 5) {
+            if ($i * $j > 15) {
+              break;
+            }
+            $j += 1;
+          }
+          /* breakによって抜けるループ ここまで*/
+
+          $i += 1;
+        }
+        /* $i = 5, $j = 4 */
+        print $i.'<br>';
+        print $j.'<br>';
+
+        print '-----------------<br>';
+
+        $i = 1;
+
+        /* breakによって抜けるループ */
+        while ($i < 5) {
+          $j = 1;
+
+          while ($j < 5) {
+            if ($i * $j > 15) {
+              break 2;
+            }
+            $j += 1;
+          }
+          $i += 1;
+        }
+        /* breakによって抜けるループ ここまで*/
+
+        /* $i = 4, $j = 4 */
+        print $i.'<br>';
+        print $j.'<br>';
+
+        print '-----------------<br>';
+
+        $count = 1;
+        $sum =0;
+        
+        while ($count <= 100) {
+          $sum += $count;
+
+          if ($sum > 1000) {
+            print '1000を越えたので count = '.$count.'で終了します<br>';
+            break;
+          }
+
+          $count += 1;
+        }
+        print 'sum = '.$sum;
+
+
+
+
+
+
         ?>
+
+        
+
         
       </main>
         
@@ -477,4 +566,4 @@
 <!-- http://localhost/javadrive_php__study -->
 
 <!-- 繰り返し処理
-breakからスタート -->
+continueからスタート -->
