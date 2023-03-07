@@ -540,7 +540,63 @@
 
           $count += 1;
         }
-        print 'sum = '.$sum;
+        print 'sum = '.$sum.'<br>';
+
+        print '-----------------<br>';
+
+
+        $count = 0;
+        $sum = 0;
+        while ($count < 100) {
+          $count += 1;
+          if ($count % 2 == 0) {
+            continue;
+          }
+          $sum = $count;
+        }
+        print '変数sum = '.$sum.'<br>';
+
+        print '<br><br>';
+
+
+        print '【プレビュー】<br>';
+        print '-----------------<br>';
+
+        $count1 = 0;
+        $sum = 0;
+
+        while ($count1 < 10) {
+          $count1 += 1;
+          $count2 = 0;
+
+          while ($count2 < 10) {
+            $count2 += 1;
+            if ($count1 * $count2 > 30) {
+              continue 2;
+            }
+            $sum += $count1 * $count2;
+          }
+        }
+        print 'sum = '.$sum.'<br>';
+        print '-----------------<br>';
+
+        $count1 = 0;
+        $sum = 0;
+
+        while ($count1 < 2) {
+          $count1 += 1;
+          $count2 = 0;
+
+          while($count2 < 2) {
+            $count2 += 1;
+            if ($count1 * $count2 > 2) {
+              continue 2;
+            }
+            $sum += $count1 * $count2;
+          }
+        }
+        print 'sum = '.$sum.'<br>';
+        print '-----------------<br>';
 
 
 
