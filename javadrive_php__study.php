@@ -622,4 +622,4 @@
 <!-- http://localhost/javadrive_php__study -->
 
 <!-- 繰り返し処理
-continueからスタート -->
+do..while文からスタート -->
