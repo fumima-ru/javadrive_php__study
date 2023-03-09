@@ -598,8 +598,16 @@
         print 'sum = '.$sum.'<br>';
         print '-----------------<br>';
 
+        print 'ここから<br>';
 
-
+        print '<br>';
+        print '【プレビュー】<br>';
+        
+        $num = 0;
+        do {
+          print 'num = '.$num.'<br>';
+          $num += 1;
+        } while ($num < 3);
 
 
 
