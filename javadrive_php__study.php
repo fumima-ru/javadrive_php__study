@@ -609,6 +609,24 @@
           $num += 1;
         } while ($num < 3);
 
+        print 'ここから<br>';
+        print '-----------------<br>';
+
+        for ($sum = 0; $sum < 2; $sum++) {
+          print $sum.'<br>';
+        }
+
+        for ($x = 0, $y = 10; $x < 10; $x ++, $y --) {
+          print '$x = '.$x.',$y = '.$y.'<br>';
+        }
+
+        print '<br>';
+        print '【プレビュー】<br>';
+
+        for ($i = 0, $j = 0; $i < 3; $i++, $j--) {
+          print '$i = '.$i.', $j = '.$j.'<br>';
+        }
+
 
 
         ?>
@@ -630,4 +648,4 @@
 <!-- http://localhost/javadrive_php__study -->
 
 <!-- 繰り返し処理
-do..while文からスタート -->
+foreach文からスタート -->
