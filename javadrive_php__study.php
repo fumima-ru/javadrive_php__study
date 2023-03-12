@@ -682,4 +682,4 @@
 <!-- http://localhost/javadrive_php__study -->
 
 <!-- 繰り返し処理
-foreach文からスタート -->
+foreach文でキーと値を取り出すからスタート -->
