@@ -461,7 +461,7 @@
           $i += 1;
         }
 
-        print '<br><br><br>';
+        print '<br>';
 
         $count = 1;
         $sum =0;
@@ -598,7 +598,7 @@
         print 'sum = '.$sum.'<br>';
         print '-----------------<br>';
 
-        print 'ここから<br>';
+        
 
         print '<br>';
         print '【プレビュー】<br>';
@@ -609,7 +609,6 @@
           $num += 1;
         } while ($num < 3);
 
-        print 'ここから<br>';
         print '-----------------<br>';
 
         for ($sum = 0; $sum < 2; $sum++) {
@@ -628,9 +627,44 @@
         }
 
 
+        $preflist = array('東京', '大阪', '名古屋', '博多');
+
+        foreach ($preflist as $pref) {
+          print $pref.'<br>';
+        }
+
+        print '-----------------<br>';
+
+        $ary = array(0, 1, 2, 3, 4, 5);
+        print $ary[1].'<br>';
+        unset($ary[4]);
+        
+        foreach ($ary as $value) {
+          print $value.', ';
+        }
+
+        print '<br>';
+        print '-----------------<br>';
+
+        $pricelist = array(80, 100, 120);
+
+        foreach ($pricelist as $value) {
+          $value *= 1.05;
+          print $value.', ';
+        }
+        unset($value);
+
+        print '<br>';
+        print '-----------------<br>';
+
+        foreach ($pricelist as $value) {
+          print $value.', ';
+        }
+
 
         ?>
 
+        
         
 
         
