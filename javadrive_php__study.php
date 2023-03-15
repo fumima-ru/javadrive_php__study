@@ -661,6 +661,88 @@
           print $value.', ';
         }
 
+        print '<br>';
+        print '-----------------<br>';
+        print '【プレビュー】<br>';
+        print '-----------------<br>';
+
+        $menulist = array('スパイスカレー' => 950, 'マンゴーラッシー' => 400);
+
+        foreach ($menulist as $key => $value) {
+          print $key.'は'.$value.'円です<br>';
+        }
+
+        print '-----------------<br>';
+
+        $pricelist = array(80, 100, 120);
+
+        foreach ($pricelist as &$value) {
+          $value *= 1.05;
+          print $value.'<br>';
+          // unset($value);
+        }
+
+        print '-----------------<br>';
+        print $value.'<br>';
+        unset($value);
+
+        print '-----------------<br>';
+
+        foreach ($pricelist as $value) {
+          print $value.'<br>';
+        }
+
+        print '<br>';       
+
+        $result[0] = 85;
+        $result[1] = 92;
+        $result[2] = 68;
+
+        print '-----------------<br>';
+        print '【for文】<br>';
+
+        for ($i = 0; $i < 3; $i++) {
+          print $result[$i].'<br>';
+        }
+
+        print '-----------------<br>';
+        print '【foreach文】<br>';
+
+        foreach ($result as $val) {
+          print $val.'<br>';
+        }
+
+        
+        print '<br>';
+
+        $result['eigo'] = 72;
+        $result['suugaku'] = 82;
+
+        $name[0] = '山田';
+        $name[1] = '高橋';
+
+        print $name[0].'<br>';
+        print $name[1].'<br>';
+
+        print $result['eigo'].'<br>';
+
+        print_r($result);
+        print '<br>';
+        print $result[0].'<br>';
+
+
+        print '<br>';
+        print '【プレビュー】<br>';
+        print '-----------------<br>';
+
+        
+        $color['イチゴ'] = '赤';
+        $color['メロン'] = '緑';
+        $color['バナナ'] = '黄';
+
+        print_r($color).'<br>';
+
+
 
         ?>
 
@@ -683,3 +765,5 @@
 
 <!-- 繰り返し処理
 foreach文でキーと値を取り出すからスタート -->
+
+<!-- 変数の前に「&」を付けることで要素の値に対する参照を設定することができます。 -->
