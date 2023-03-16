@@ -122,13 +122,11 @@
 
       print SHOP.'<br>';
       print '所在地 : '.$address[SHOP].'<br>';
-      
+
       print_r(SHOP);
       print '<br>';
       print_r($address);
       print '<br>';
-
-
 
 
 
