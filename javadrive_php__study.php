@@ -65,94 +65,93 @@
       print '-----------------<br>';
       ?>
 
-      <?php
-      /* 配列の初期化 使い始める前の変数（値を入れる箱）に初期値（最初の値）を設定する行為を「変数の初期化」と言います。
-      $var = array(); */
+      
+      <!-- /* 配列の初期化 使い始める前の変数（値を入れる箱）に初期値（最初の値）を設定する行為を「変数の初期化」と言います。
+      $var = array(); */ -->
 
+      <?php
 
       $var1 = array('Tokyo' => '東京', 'Osaka' => '大阪', 'Fukuoka' => '福岡');
+      
+      print '$var1 = ';
       print_r($var1);
       print '<br>';
 
-      print '-----------------<br>';
+      print '-------------------------------------------------------------------------------<br>';
 
       $var2 = array('Hokkaido' => '北海道',
                     'Nagano' => '長野',
-                    'Aichi' => '愛知');
+                    'Aichi' => '愛知',
+      );
       
+      print '$var2 = ';
       print_r($var2);
       print '<br>';
 
-      print '-----------------<br>';
+      print '-----------------------------------------------------------------------------------<br>';
 
       $var3['Ishikawa'] = '石川';
       $var3['Hiroshima'] = '広島';
       $var3['Ehime'] = '愛媛';
 
+      print '$var3 = ';
       print_r($var3);
       print '<br>';
 
-      print '-----------------<br>';
+      print '------------------------------------------------------------------------------------<br>';
 
       $var4 = array('Japan', 'China', 'Korea');
 
+      print '$var4 = ';
       print_r($var4);
       print '<br>';
 
-      print '-----------------<br>';
+      print '------------------------------------------------------------------<br>';
 
       $var5 = array(10 =>'Italy', 'France', 'Germany');
+
+      print '$var5 = ';
       print_r($var5);
       print '<br>';
 
-      print '-----------------<br>';
+      print '--------------------------------------------------------------------------<br>';
 
       $var6 = ['Nigeria',
-                'Senegal',
-                'Ghana'
-              ];
+               'Senegal',
+               'Ghana',
+      ];
 
+      print '$var6 = ';
       print_r($var6);
       print '<br>';
 
+      ?>
+
+
+      <br><br><br>
+
+      <?php
+
+      $var7 = ['Nigeria',
+               'Senegal',
+               'Ghana',
+      ];
+
+      print '$var7 = ';
+      print_r($var7);
+      print '<br>';
+
+      $var8 = ['Nigeria',
+               'Senegal',
+               'Ghana',
+              ];
+
+      print '$var8 = ';
+      print_r($var8);
+      print '<br>';
 
       ?>
-        
-<!-- 配列の要素の初期化(値の格納)
-
-色々な書き方
-
-【配列, 初期化, 値の格納】
-#3_18_2023
-#プログラミング
-#プログラマー
-#プログラマー女子!?
-#プログラマー初心者
-#アウトプット
-#computerprogrammer
-#javascript
-#jquery
-#html
-#css
-#ブログ
-#codestep
-#模写
-#progate
-#プロゲート
-#サーバー
-#エックスサーバー
-#ポートフォリオ
-#git
-#github
-#vscode
-#タスク管理
-#プロジェクト管理
-#php
-#letsプログラミング
-#print_r関数
-#配列
-#初期化
-#値の格納 -->
+      
         
       </main>
         
@@ -167,8 +166,8 @@
 
 <!-- http://localhost/javadrive_php__study -->
 
-<!-- 繰り返し処理
-foreach文でキーと値を取り出すからスタート -->
+<!-- 配列
+多次元配列からスタート -->
 
 <!-- 変数の前に「&」を付けることで要素の値に対する参照を設定することができます。 -->
 <!--  -->
