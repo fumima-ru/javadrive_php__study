@@ -207,6 +207,123 @@
       print '<br>';
       ?>
 
+      <br><br><br>
+      
+      <?php
+      print '<br>';
+      print '【プレビュー】<br>';
+      print '------------------------------------------<br>';
+      ?>
+
+      <?php
+      $array1 = [1, 2, 3];
+      $array2 = [1, 2, 3, 4];
+      $arrays = [$array1, $array2];
+
+      $sum = 0;
+
+      foreach ($arrays as $array) {
+          foreach ($array as $value) {
+              $sum += $value;
+          }
+      }
+      print $sum;
+      print '<br>';
+      print '------------------------------------------<br>';
+      ?>
+
+      <?php
+      $areas = [
+          '関東' => ['東京都', '神奈川県', '埼玉県'],
+          '関西' => ['大阪府', '京都府', '奈良県'],
+          '九州' => ['福岡県', '鹿児島県', '長崎県'],
+          '東北' => ['宮城県', '青森県', '秋田県'],
+      ];
+
+      foreach ($areas as $key => $area) {
+          echo $area[0].','.$area[1].','.$area[2].'は'.$key.'地方です ';
+          print '<br>';
+          print '------------------------------------------<br>';
+      }
+      ?>
+
+      <?php
+      $sugaku = 84;
+      $eigo = 62;
+      $kokugo = 78;
+
+      print '数学の結果：';
+      if ($sugaku > 75) {
+        print '合格です';
+      } else {
+        print '不合格です';
+      }
+
+      print '<br>';
+
+      print '英語の結果：';
+      if ($eigo > 75) {
+        print '合格です';
+      } else {
+        print '不合格です';
+      }
+
+      print '<br>';
+
+      print '国語の結果：';
+      if ($kokugo > 75) {
+        print '合格です';
+      } else {
+        print '不合格です';
+      }
+
+      print '<br>';
+      ?>
+
+      <br><br><br>
+      
+      <?php
+      print '<br>';
+      print '【プレビュー】<br>';
+      print '-----------------<br>';
+      ?>
+
+      <?php
+      $math = 35;
+      $english = 65;
+      $japanese = 80;
+      $social_studies = 60;
+      $science = 75;
+      $music = 95;
+      $physical_education = 100;
+
+      check('数学', $math);
+      check('英語', $english);
+      check('国語', $japanese);
+      check('社会', $social_studies);
+      check('理科', $science);
+      check('音楽', $music);
+      check('体育', $physical_education);
+
+      
+      function check($subject, $score) {
+        print $subject.'：'.$score.'点';
+        print '<br>';
+        if ($score >= 85) {
+          print 'よく出来ました';
+        } elseif ($score >= 60) {
+          print '惜しい！';
+        } elseif ($score >= 40) {
+          print 'もう少し頑張りましょう';
+        } else {
+          print '補習です';
+        }
+        print '<br>';
+        print '-----------------<br>';
+      }
+      ?>
+
+      
       
         
       </main>
@@ -234,6 +351,15 @@
 
 PHPのコーディング規約に
 インデントは半角スペース4つというルールがあると見かけたので
+
+組み込み関数 アウトプット
+
+関数には組み込み関数とユーザー定義関数の2種類がある
+
+関数を作るには「function 関数名(){ 処理 }」という書き方をします。
+関数名は自由につけることが出来ます
+関数は「関数名()」というように()をつけて呼び出すことができます
+
 
 
 
