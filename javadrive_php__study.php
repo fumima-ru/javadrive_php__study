@@ -54,17 +54,10 @@
       print '<br>';
       ?>
 
-
-
-
-
-
-      <?php
-      print '<br>';
-      print '【プレビュー】<br>';
-      print '-----------------<br>';
-      ?>
+      <br><br><br>
       <p> -----------------</p>
+      <!-- これ以下は消してOK -->
+
 
       
       <!-- /* 配列の初期化 使い始める前の変数（値を入れる箱）に初期値（最初の値）を設定する行為を「変数の初期化」と言います。
@@ -128,9 +121,6 @@
 
       ?>
 
-
-      <br><br><br>
-
       <?php
 
       $var7 = ['Nigeria',
@@ -152,8 +142,6 @@
       print '<br>';
 
       ?>
-
-      <br><br><br>
 
       <?php
       print '<br>';
@@ -206,8 +194,6 @@
       print $food[0][1];
       print '<br>';
       ?>
-
-      <br><br><br>
       
       <?php
       print '<br>';
@@ -280,7 +266,7 @@
       print '<br>';
       ?>
 
-      <br><br><br>
+      
       
       <?php
       print '<br>';
@@ -323,6 +309,75 @@
       }
       ?>
 
+      <?php
+      print '<br>';
+      print '【プレビュー】<br>';
+      print '-----------------<br>';
+      ?>
+
+      <?php
+      print '定義前に関数を呼び出す<br>';
+      hello();
+      print '<br>';
+      print '-----------------<br>';
+
+      // 関数の定義
+      function hello() {
+        print 'hello';
+      }
+
+      print '定義後に関数を呼び出す<br>';
+      hello();
+      print '<br>';
+      print '-----------------<br>';
+      ?>
+
+      <?php
+      // 関数の呼び出し
+      hello();
+      print '<br>';
+      print '-----------------<br>';
+      ?>
+
+      <?php
+      // 関数の定義
+      function alphabet() {
+        print 'HIJKLMN ←【関数 alphabet】';
+      }
+
+      /* 関数の呼び出し */
+      print 'ABCDEFG<br>';
+      alphabet();
+      print '<br>';
+      print 'OPQRSTU<br>';
+      print 'VWXYZ<br>';
+      print '-----------------<br>';
+      ?>
+
+      
+
+      <?php
+
+      ?>
+
+
+
+
+      <br><br><br>
+      <!-- テスト -->
+      <?php
+      function attendance_at_work($greeting) {
+        return 'おはようございます';
+      }
+
+      $good_morning = attendance_at_work('おはようございます');
+
+      print $good_morning;
+      // print $greeting;
+      print '<br>';
+      print '-----------------<br>';
+      ?>
+      <!-- テスト終 -->
       
       
         
