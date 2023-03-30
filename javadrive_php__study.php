@@ -64,211 +64,6 @@
       $var = array(); */ -->
 
       <?php
-
-      $var1 = array('Tokyo' => '東京', 'Osaka' => '大阪', 'Fukuoka' => '福岡');
-      
-      print '$var1 = ';
-      print_r($var1);
-      print '<br>';
-
-      print '-------------------------------------------------------------------------------<br>';
-
-      $var2 = array('Hokkaido' => '北海道',
-                    'Nagano' => '長野',
-                    'Aichi' => '愛知',
-      );
-      
-      print '$var2 = ';
-      print_r($var2);
-      print '<br>';
-
-      print '-----------------------------------------------------------------------------------<br>';
-
-      $var3['Ishikawa'] = '石川';
-      $var3['Hiroshima'] = '広島';
-      $var3['Ehime'] = '愛媛';
-
-      print '$var3 = ';
-      print_r($var3);
-      print '<br>';
-
-      print '------------------------------------------------------------------------------------<br>';
-
-      $var4 = array('Japan', 'China', 'Korea');
-
-      print '$var4 = ';
-      print_r($var4);
-      print '<br>';
-
-      print '------------------------------------------------------------------<br>';
-
-      $var5 = array(10 =>'Italy', 'France', 'Germany');
-
-      print '$var5 = ';
-      print_r($var5);
-      print '<br>';
-
-      print '--------------------------------------------------------------------------<br>';
-
-      $var6 = ['Nigeria',
-               'Senegal',
-               'Ghana',
-      ];
-
-      print '$var6 = ';
-      print_r($var6);
-      print '<br>';
-
-      ?>
-
-      <?php
-
-      $var7 = ['Nigeria',
-               'Senegal',
-               'Ghana',
-      ];
-
-      print '$var7 = ';
-      print_r($var7);
-      print '<br>';
-
-      $var8 = ['Nigeria',
-               'Senegal',
-               'Ghana',
-              ];
-
-      print '$var8 = ';
-      print_r($var8);
-      print '<br>';
-
-      ?>
-
-      <?php
-      print '<br>';
-      print '【プレビュー】<br>';
-      print '-----------------<br>';
-      ?>
-
-      <?php
-      $maker = array('富士通', 'NEC', 'Sony', 'Sharp');
-      $type = array('Note', 'Desktop');
-
-      $pc = array($maker, $type);
-      ?>
-
-      <?php
-      print_r($pc);
-      print '<br>';
-      print $pc[0][2];
-      print '<br>';
-      ?>
-
-      <p> -----------------</p>
-
-      <?php
-      $maker = array('Microsoft', 'Apple', 'HP', 'Lenovo');
-      $type = array('Note', 'Desktop');
-
-      $pc[0] = $maker;
-      $pc[1] = $type;
-      ?>
-
-      <?php
-      print_r($pc);
-      print '<br>';
-      print $pc[0][2];
-      print '<br>';
-      ?>
-
-      <p> -----------------</p>
-
-      <?php
-      $food = [
-          ['カレー', 'curry'],
-          ['ハンバーガー', 'hamburger'],
-          ['パスタ', 'pasta'],
-      ];
-
-      print_r($food);
-      print '<br>';
-      print $food[0][1];
-      print '<br>';
-      ?>
-      
-      <?php
-      print '<br>';
-      print '【プレビュー】<br>';
-      print '------------------------------------------<br>';
-      ?>
-
-      <?php
-      $array1 = [1, 2, 3];
-      $array2 = [1, 2, 3, 4];
-      $arrays = [$array1, $array2];
-
-      $sum = 0;
-
-      foreach ($arrays as $array) {
-          foreach ($array as $value) {
-              $sum += $value;
-          }
-      }
-      print $sum;
-      print '<br>';
-      print '------------------------------------------<br>';
-      ?>
-
-      <?php
-      $areas = [
-          '関東' => ['東京都', '神奈川県', '埼玉県'],
-          '関西' => ['大阪府', '京都府', '奈良県'],
-          '九州' => ['福岡県', '鹿児島県', '長崎県'],
-          '東北' => ['宮城県', '青森県', '秋田県'],
-      ];
-
-      foreach ($areas as $key => $area) {
-          echo $area[0].','.$area[1].','.$area[2].'は'.$key.'地方です ';
-          print '<br>';
-          print '------------------------------------------<br>';
-      }
-      ?>
-
-      <?php
-      $sugaku = 84;
-      $eigo = 62;
-      $kokugo = 78;
-
-      print '数学の結果：';
-      if ($sugaku > 75) {
-        print '合格です';
-      } else {
-        print '不合格です';
-      }
-
-      print '<br>';
-
-      print '英語の結果：';
-      if ($eigo > 75) {
-        print '合格です';
-      } else {
-        print '不合格です';
-      }
-
-      print '<br>';
-
-      print '国語の結果：';
-      if ($kokugo > 75) {
-        print '合格です';
-      } else {
-        print '不合格です';
-      }
-
-      print '<br>';
-      ?>
-
-      
-      
-      <?php
       print '<br>';
       print '【プレビュー】<br>';
       print '-----------------<br>';
@@ -315,6 +110,22 @@
       print '-----------------<br>';
       ?>
 
+      <!-- 関数の定義
+function 関数名(引数1, 引数2, ...){
+  実行される処理1;
+  実行される処理2;
+}
+
+関数の呼び出し
+関数名(引数1, 引数2, ...);
+
+関数から返された値を変数に代入
+変数 = 関数名(引数1, 引数2, ...);
+
+その他
+関数は関数呼び出しよりも前で定義しても後で定義しても構いません。
+ -->
+
       <?php
       print '定義前に関数を呼び出す<br>';
       hello();
@@ -354,11 +165,108 @@
       print '-----------------<br>';
       ?>
 
-      
 
+      <!-- ------------------------------------------------------------- -->
+
+
+      <?php
+      print '<br>';
+      print '【プレビュー】<br>';
+      print '-----------------<br>';
+      ?>
+
+      <?php
+      function display1($value1, $value2) {
+        if ($value1 + $value2 == 7) {
+          print '値は７です';
+        }
+      }
+
+      display1(3, 4);
+      ?>
+
+      <br>
+
+      <?php
+      function display2($value3, $value4) {
+        if ($value3 + $value4 == 10) {
+          print '値は10です';
+        } else {
+          print '値は10ではありません';
+        }
+      }
+
+      display2(7, 7);
+      ?>
+
+      <br>
+
+      <?php
+      print '<br>';
+      print '【プレビュー】<br>';
+      ?>
+
+      <p>【1】-----------------</p>
+  
+      <?php
+      print 'こんにちは高橋さん、';
+      print 'お元気ですか。<br>';
+
+      print 'こんにちは大野さん、';
+      print 'お元気ですか。<br>';
+      ?>
+
+      <p>【2】-----------------</p>
+
+      <?php
+      function greeting_2() {
+        print 'お元気ですか。';
+        print '<br>';
+      }
+
+      print 'こんにちは高橋さん、';
+      greeting_2();
+
+      print 'こんにちは大野さん、';
+      greeting_2();
+      ?>
+
+      <p>【3】-----------------</p>
+
+      <?php
+      function greeting_3($name) {
+        print "こんにちは{$name}さん、";
+        print 'お元気ですか。';
+        print '<br>';
+      }
+
+      greeting_3('高橋');
+      greeting_3('大野');
+      ?>
+
+      <p>【4】-----------------</p>
+
+      <?php
+      function greeting_4($name) {
+        print 'こんにちは'.$name.'さん、お元気ですか。<br>';
+      }
+
+      greeting_4('高橋');
+      greeting_4('大野');      
+      ?>
+
+      <br><br><br>
+      <?php
+      print '<br>';
+      print '【プレビュー】<br>';
+      ?>
+
+      <!--引数を使って関数に値を渡す 複数の引数 ここからスタート-->
       <?php
 
       ?>
+
+
 
 
 
