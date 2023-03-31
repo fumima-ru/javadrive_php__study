@@ -261,10 +261,101 @@ function 関数名(引数1, 引数2, ...){
       print '【プレビュー】<br>';
       ?>
 
-      <!--引数を使って関数に値を渡す 複数の引数 ここからスタート-->
-      <?php
+      <!--引数を使って関数に値を渡す 複数の引数 -->
 
+
+
+      <h1>【ローカル変数】</h1>
+      <!-- ローカル変数を関数内で使用 -->
+      <?php
+      function average1($num1, $num2) {
+        $result1 = ($num1 + $num2) / 2;
+        print '$result1の答えは'.$result1.'です。';
+        print '<br>';
+        print '-----------------<br>';
+      }
+
+      average1(2, 10);
       ?>
+
+      <h1>【ローカル変数】</h1>
+      <!-- ローカル変数を関数外で使おうとした為エラーが発生(変数の未定義) -->
+      <?php
+      function average2($num3, $num4) {
+        $result2 = ($num3 + $num4) / 2;
+      }
+
+      print '$result2の答えは'.$result2.'です。';
+      print '<br>';
+      print '-----------------<br>';
+
+      average2(4, 20);
+      ?>
+
+      <h1>【グローバル変数】(ファイル全体で有効な変数)</h1>
+      <!-- グローバル変数を関数内で使用 -->
+      <?php
+      $num5 = 6;
+      $num6 = 30;
+      $result3 = ($num5 + $num6) / 2;
+
+      function average3() {
+        global $result3;
+        print '$result3の答えは'.$result3.'です。';
+        print '<br>';
+        print '-----------------<br>';
+      }
+
+      average3();
+      ?>
+
+      <?php
+      function heikin($num7, $num8) {
+        $result4 = ($num7 + $num8) / 2;
+        print $num7.'と'.$num8.'の平均は'.$result4.'です。';
+        print '<br>';
+      }
+
+      heikin(1, 3);
+      heikin(4, 4);
+      ?>
+
+      <!-- 関数から値を返すにはreturn文を使います。書式は次の通りです。
+
+return 戻り値;
+
+戻り値を保存するには「変数 = 関数名(引数)」のように変数に対して格納
+戻り値には数値や文字列などの他に配列など全ての値を指定可能
+
+関数の中でreturn文が実行されると戻り値を返すと共に関数内の処理をそこで終了します。つまりreturn文が実行されると処理は関数を呼び出した元に処理が移ります。
+
+戻り値として指定できる値は1つだけ
+ただし配列も指定が可能なので配列を使うことで実質的に複数の値を返すことも可能です。 -->
+
+      <!-- 戻り値を使って関数から値を返す ここから-->
+
+
+
+
+
+
+
+
+
+      <?php
+      /* function average3($num5, $num6) {
+        global $result3;
+        echo $result3;
+      }
+
+      $result3 = ($num5 + $num6) / 2;
+      /* スコープ外の変数 */
+      /* print $result3;
+      print '<br>';
+
+      average3(6, 30); */
+      ?>
+      
 
 
 
