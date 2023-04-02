@@ -69,48 +69,8 @@
       print '-----------------<br>';
       ?>
 
-      <?php
-      $math = 35;
-      $english = 65;
-      $japanese = 80;
-      $social_studies = 60;
-      $science = 75;
-      $music = 95;
-      $physical_education = 100;
 
-      check('数学', $math);
-      check('英語', $english);
-      check('国語', $japanese);
-      check('社会', $social_studies);
-      check('理科', $science);
-      check('音楽', $music);
-      check('体育', $physical_education);
-
-      
-      function check($subject, $score) {
-        print $subject.'：'.$score.'点';
-        print '<br>';
-        if ($score >= 85) {
-          print 'よく出来ました';
-        } elseif ($score >= 60) {
-          print '惜しい！';
-        } elseif ($score >= 40) {
-          print 'もう少し頑張りましょう';
-        } else {
-          print '補習です';
-        }
-        print '<br>';
-        print '-----------------<br>';
-      }
-      ?>
-
-      <?php
-      print '<br>';
-      print '【プレビュー】<br>';
-      print '-----------------<br>';
-      ?>
-
-      <!-- 関数の定義
+<!-- 関数の定義
 function 関数名(引数1, 引数2, ...){
   実行される処理1;
   実行される処理2;
@@ -123,209 +83,17 @@ function 関数名(引数1, 引数2, ...){
 変数 = 関数名(引数1, 引数2, ...);
 
 その他
-関数は関数呼び出しよりも前で定義しても後で定義しても構いません。
- -->
-
-      <?php
-      print '定義前に関数を呼び出す<br>';
-      hello();
-      print '<br>';
-      print '-----------------<br>';
-
-      // 関数の定義
-      function hello() {
-        print 'hello';
-      }
-
-      print '定義後に関数を呼び出す<br>';
-      hello();
-      print '<br>';
-      print '-----------------<br>';
-      ?>
-
-      <?php
-      // 関数の呼び出し
-      hello();
-      print '<br>';
-      print '-----------------<br>';
-      ?>
-
-      <?php
-      // 関数の定義
-      function alphabet() {
-        print 'HIJKLMN ←【関数 alphabet】';
-      }
-
-      /* 関数の呼び出し */
-      print 'ABCDEFG<br>';
-      alphabet();
-      print '<br>';
-      print 'OPQRSTU<br>';
-      print 'VWXYZ<br>';
-      print '-----------------<br>';
-      ?>
+関数は関数呼び出しよりも前で定義しても後で定義しても構いません。 -->
 
 
-      <!-- ------------------------------------------------------------- -->
-
-
-      <?php
-      print '<br>';
-      print '【プレビュー】<br>';
-      print '-----------------<br>';
-      ?>
-
-      <?php
-      function display1($value1, $value2) {
-        if ($value1 + $value2 == 7) {
-          print '値は７です';
-        }
-      }
-
-      display1(3, 4);
-      ?>
-
-      <br>
-
-      <?php
-      function display2($value3, $value4) {
-        if ($value3 + $value4 == 10) {
-          print '値は10です';
-        } else {
-          print '値は10ではありません';
-        }
-      }
-
-      display2(7, 7);
-      ?>
-
-      <br>
-
-      <?php
-      print '<br>';
-      print '【プレビュー】<br>';
-      ?>
-
-      <p>【1】-----------------</p>
-  
-      <?php
-      print 'こんにちは高橋さん、';
-      print 'お元気ですか。<br>';
-
-      print 'こんにちは大野さん、';
-      print 'お元気ですか。<br>';
-      ?>
-
-      <p>【2】-----------------</p>
-
-      <?php
-      function greeting_2() {
-        print 'お元気ですか。';
-        print '<br>';
-      }
-
-      print 'こんにちは高橋さん、';
-      greeting_2();
-
-      print 'こんにちは大野さん、';
-      greeting_2();
-      ?>
-
-      <p>【3】-----------------</p>
-
-      <?php
-      function greeting_3($name) {
-        print "こんにちは{$name}さん、";
-        print 'お元気ですか。';
-        print '<br>';
-      }
-
-      greeting_3('高橋');
-      greeting_3('大野');
-      ?>
-
-      <p>【4】-----------------</p>
-
-      <?php
-      function greeting_4($name) {
-        print 'こんにちは'.$name.'さん、お元気ですか。<br>';
-      }
-
-      greeting_4('高橋');
-      greeting_4('大野');      
-      ?>
-
-      <br><br><br>
-      <?php
-      print '<br>';
-      print '【プレビュー】<br>';
-      ?>
-
-      <!--引数を使って関数に値を渡す 複数の引数 -->
-
-
-
-      <h1>【ローカル変数】</h1>
-      <!-- ローカル変数を関数内で使用 -->
-      <?php
-      function average1($num1, $num2) {
-        $result1 = ($num1 + $num2) / 2;
-        print '$result1の答えは'.$result1.'です。';
-        print '<br>';
-        print '-----------------<br>';
-      }
-
-      average1(2, 10);
-      ?>
-
-      <h1>【ローカル変数】</h1>
-      <!-- ローカル変数を関数外で使おうとした為エラーが発生(変数の未定義) -->
-      <?php
-      function average2($num3, $num4) {
-        $result2 = ($num3 + $num4) / 2;
-      }
-
-      print '$result2の答えは'.$result2.'です。';
-      print '<br>';
-      print '-----------------<br>';
-
-      average2(4, 20);
-      ?>
-
-      <h1>【グローバル変数】(ファイル全体で有効な変数)</h1>
-      <!-- グローバル変数を関数内で使用 -->
-      <?php
-      $num5 = 6;
-      $num6 = 30;
-      $result3 = ($num5 + $num6) / 2;
-
-      function average3() {
-        global $result3;
-        print '$result3の答えは'.$result3.'です。';
-        print '<br>';
-        print '-----------------<br>';
-      }
-
-      average3();
-      ?>
-
-      <?php
-      function heikin($num7, $num8) {
-        $result4 = ($num7 + $num8) / 2;
-        print $num7.'と'.$num8.'の平均は'.$result4.'です。';
-        print '<br>';
-      }
-
-      heikin(1, 3);
-      heikin(4, 4);
-      ?>
-
-      <!-- 関数から値を返すにはreturn文を使います。書式は次の通りです。
+<!-- 関数から値を返すにはreturn文を使います。書式は次の通りです。
 
 return 戻り値;
 
 戻り値を保存するには「変数 = 関数名(引数)」のように変数に対して格納
 戻り値には数値や文字列などの他に配列など全ての値を指定可能
+
+ーーーーーーーーーーーーーーーーーーーーーーーーー
 
 関数の中でreturn文が実行されると戻り値を返すと共に関数内の処理をそこで終了します。つまりreturn文が実行されると処理は関数を呼び出した元に処理が移ります。
 
@@ -333,7 +101,31 @@ return 戻り値;
 ただし配列も指定が可能なので配列を使うことで実質的に複数の値を返すことも可能です。 -->
 
       <!-- 戻り値を使って関数から値を返す ここから-->
+      <!--  -->
 
+
+      <?php
+      function plus($num1, $num2) {
+        $variables_in_functions = $num1 + $num2;
+        /* return文【return 戻り値;】 */
+        return $variables_in_functions;
+      }
+
+      /* 関数の呼び出し【関数名();】 */
+      print '加算の結果は'.plus(10, 10).'です。<br>';
+
+      /* 関数を呼び出して変数に格納【変数 = 関数名();】*/
+      $return_variables_in_functions = plus(5, 5);
+      print '加算の結果は'.$return_variables_in_functions.'です。<br>';
+      ?>
+
+
+
+      
+<!-- 次にやること　print 'return実行後の処理は実行されない'; 
+　　　　　　　　　　return文を複数記述-->
+
+<!-- その次　配列を返す -->
 
 
 
