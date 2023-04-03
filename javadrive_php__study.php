@@ -100,75 +100,135 @@ return 戻り値;
 戻り値として指定できる値は1つだけ
 ただし配列も指定が可能なので配列を使うことで実質的に複数の値を返すことも可能です。 -->
 
-      <!-- 戻り値を使って関数から値を返す ここから-->
-      <!--  -->
 
+      <?php
+      function test1($num1, $num2) {
+        $sum = $num1 + $num2;
+        return $sum;
+        print 'この文字列は出力されない<br>';
+      }
+
+      print test1(5, 5).'<br>';
+      print 'この文字列は出力される<br>';
+      ?>
+
+      <?php
+      print '<br>';
+      print '【プレビュー】<br>';
+      print '-----------------<br>';
+      ?>
+
+      <?php
+      function division($num1, $num2) {
+        if ($num2 == 0) {
+          return 'NULL';
+        } else {
+          return $num1 / $num2;
+        }
+      }
+
+      print '10 ÷ 5 = '.division(10, 5).'<br>';
+      print '10 ÷ 0 = '.division(10, 0).'<br>';
+      
+      ?>
+
+      <p> -----------------</p>
+
+      <?php
+      /* function addition($num3, $num4) {
+        if ($num3 + $num4 == 24) {
+          return '24です';
+        } else {
+          return '24ではありません';
+        }
+      }
+
+      print '7 + 17 => '.addition(7, 17).'<br>';
+      print '5 + 5 => '.addition(5, 5).'<br>'; */
+      ?>
+
+      <p> -----------------</p>
+
+      <?php
+      function subtraction($num5, $num6) {
+        if ($num5 - $num6 == 0) {
+          return '0です';
+        } elseif ($num5 - $num6 == 1) {
+          return'1です';
+        } elseif ($num5 - $num6 == 2) {
+          return '2です';
+        } elseif ($num5 - $num6 == 3) {
+          return '3です';
+        } elseif ($num5 - $num6 == 4) {
+          return '4です';
+        } elseif ($num5 - $num6 == 5) {
+          return '5です';
+        } elseif ($num5 - $num6 == 6) {
+          return '6です';
+        } elseif ($num5 - $num6 == 7) {
+          return '7です'; 
+        } else {
+          return '1~7以外です'; 
+        }
+      }
+
+      print '8 - 8 => '.subtraction(8, 8).'<br>';
+      print '8 - 7 => '.subtraction(8, 7).'<br>';
+      print '8 - 6 => '.subtraction(8, 6).'<br>';
+      print '8 - 5 => '.subtraction(8, 5).'<br>';
+      print '8 - 4 => '.subtraction(8, 4).'<br>';
+      print '8 - 3 => '.subtraction(8, 3).'<br>';
+      print '8 - 2 => '.subtraction(8, 2).'<br>';
+      print '8 - 1 => '.subtraction(8, 1).'<br>';
+      print '8 - 0 => '.subtraction(8, 0).'<br>';
+      ?>
 
       <?php
       function plus($num1, $num2) {
-        $variables_in_functions = $num1 + $num2;
-        /* return文【return 戻り値;】 */
-        return $variables_in_functions;
+        $sum = $num1 + $num2;
+        return $sum;
       }
+      $sum_1 = plus(10, 8);
+      print '10 + 8 ='.$sum_1.'です<br>';
 
-      /* 関数の呼び出し【関数名();】 */
-      print '加算の結果は'.plus(10, 10).'です。<br>';
-
-      /* 関数を呼び出して変数に格納【変数 = 関数名();】*/
-      $return_variables_in_functions = plus(5, 5);
-      print '加算の結果は'.$return_variables_in_functions.'です。<br>';
+      print '7 + 14 の結果は'.plus(7, 14).'です<br>';
       ?>
 
+      <!-- return文を複数記述し条件に応じて戻り値を変更する
+return文とswitch文
 
+【関数,return文,switch文】 -->
+      <?php
+      function addition($num1, $num2) {
+        switch ($num1 + $num2) {
+        case 1:
+          print '合計1個です';
+          break;
+        case 2:
+          print '合計2個です';
+          break;
+        case 3:
+          print '合計3個です';
+          break;
+        case 4:
+          print '合計4個です';
+          break;
+        case 5:
+          print '合計5個です';
+          break;
+        default:
+          print '合計は6個以上です';
+        }
+      }
 
-      
-<!-- 次にやること　print 'return実行後の処理は実行されない'; 
-　　　　　　　　　　return文を複数記述-->
+      // print addition();
 
+      ?>
+
+<!-- return文を複数記述し条件に応じて戻り値を変更する
+return文とif文以外
+ -->
 <!-- その次　配列を返す -->
-
-
-
-
-
-
-
-
-      <?php
-      /* function average3($num5, $num6) {
-        global $result3;
-        echo $result3;
-      }
-
-      $result3 = ($num5 + $num6) / 2;
-      /* スコープ外の変数 */
-      /* print $result3;
-      print '<br>';
-
-      average3(6, 30); */
-      ?>
-      
-
-
-
-
-
-
-      <br><br><br>
-      <!-- テスト -->
-      <?php
-      function attendance_at_work($greeting) {
-        return 'おはようございます';
-      }
-
-      $good_morning = attendance_at_work('おはようございます');
-
-      print $good_morning;
-      // print $greeting;
-      print '<br>';
-      print '-----------------<br>';
-      ?>
-      <!-- テスト終 -->
       
       
         
@@ -185,13 +245,11 @@ return 戻り値;
 
 <!-- http://localhost/javadrive_php__study -->
 
-<!-- 関数の定義と呼び出しからスタート -->
 
 <!-- 変数の前に「&」を付けることで要素の値に対する参照を設定することができます。 -->
 <!-- PHPのコーディング規約に
 インデントは半角スペース4つというルールがある
 
-組み込み関数 アウトプット
 
 関数を作るには「function 関数名(){ 処理 }」という書き方をします。
 関数名は自由につけることが出来ます
