@@ -101,37 +101,7 @@ return 戻り値;
 ただし配列も指定が可能なので配列を使うことで実質的に複数の値を返すことも可能です。 -->
 
 
-      <?php
-      function test1($num1, $num2) {
-        $sum = $num1 + $num2;
-        return $sum;
-        print 'この文字列は出力されない<br>';
-      }
-
-      print test1(5, 5).'<br>';
-      print 'この文字列は出力される<br>';
-      ?>
-
-      <?php
-      print '<br>';
-      print '【プレビュー】<br>';
-      print '-----------------<br>';
-      ?>
-
-      <?php
-      function division($num1, $num2) {
-        if ($num2 == 0) {
-          return 'NULL';
-        } else {
-          return $num1 / $num2;
-        }
-      }
-
-      print '10 ÷ 5 = '.division(10, 5).'<br>';
-      print '10 ÷ 0 = '.division(10, 0).'<br>';
       
-      ?>
-
       <p> -----------------</p>
 
       <?php
@@ -148,6 +118,8 @@ return 戻り値;
       ?>
 
       <p> -----------------</p>
+
+      
 
       <?php
       function subtraction($num5, $num6) {
@@ -183,47 +155,118 @@ return 戻り値;
       print '8 - 0 => '.subtraction(8, 0).'<br>';
       ?>
 
-      <?php
-      function plus($num1, $num2) {
-        $sum = $num1 + $num2;
-        return $sum;
-      }
-      $sum_1 = plus(10, 8);
-      print '10 + 8 ='.$sum_1.'です<br>';
-
-      print '7 + 14 の結果は'.plus(7, 14).'です<br>';
-      ?>
+      
 
       <!-- return文を複数記述し条件に応じて戻り値を変更する
 return文とswitch文
 
 【関数,return文,switch文】 -->
+
       <?php
-      function addition($num1, $num2) {
+      print '<br>';
+      print '【プレビュー】<br>';
+      print '-----------------<br>';
+      ?>
+
+      <?php
+      function addition1($num1, $num2) {
         switch ($num1 + $num2) {
         case 1:
-          print '合計1個です';
+          print '合計 => 1です';
           break;
         case 2:
-          print '合計2個です';
+          print '合計 => 2です';
           break;
         case 3:
-          print '合計3個です';
+          print '合計 => 3です';
           break;
         case 4:
-          print '合計4個です';
+          print '合計 => 4です';
           break;
         case 5:
-          print '合計5個です';
+          print '合計 => 5です';
           break;
         default:
-          print '合計は6個以上です';
+          print '合計 => 6以上です';
         }
       }
 
-      // print addition();
-
+      addition1(0, 1);
+      print '<br>';
+      addition1(1, 1);
+      print '<br>';
+      addition1(2, 1);
+      print '<br>';
+      addition1(3, 1);
+      print '<br>';
+      addition1(4, 1);
+      print '<br>';
+      addition1(5, 1);
       ?>
+
+      <br>
+
+      <?php
+      print '<br>';
+      print '【プレビュー】<br>';
+      print '-----------------<br>';
+      ?>
+
+      <?php
+      function addition2($num1, $num2) {
+        switch ($num1 + $num2) {
+        case 1:
+          return '合計 => 1です';
+          break;
+        case 2:
+          return '合計 => 2です';
+          break;
+        case 3:
+          return '合計 => 3です';
+          break;
+        case 4:
+          return '合計 => 4です';
+          break;
+        case 5:
+          return '合計 => 5です';
+          break;
+        default:
+          return '合計 => 6以上です';
+        }
+      }
+
+      print addition2(0, 1).'<br>';
+      print addition2(1, 1).'<br>';
+      print addition2(2, 1).'<br>';
+      print addition2(3, 1).'<br>';
+      print addition2(4, 1).'<br>';
+      print addition2(5, 1).'<br>';
+      ?>
+      
+      <br>
+
+      <?php
+      print '<br>';
+      print '【プレビュー】<br>';
+      print '-----------------<br>';
+      ?>
+
+
+      <?php
+      function multiple_of_7($num) {
+        return $num % 7 == 0 ? '７の倍数です' : '７の倍数ではありません';
+      }
+
+      $value1 = multiple_of_7(7);
+      $value2 = multiple_of_7(10);
+
+      print '値１は'.$value1.'<br>';
+      print '値２は'.$value2.'<br>';
+      ?>
+
+      
+
+
 
 <!-- return文を複数記述し条件に応じて戻り値を変更する
 return文とif文以外
