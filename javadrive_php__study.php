@@ -69,209 +69,29 @@
       print '-----------------<br>';
       ?>
 
-
-<!-- 関数の定義
-function 関数名(引数1, 引数2, ...){
-  実行される処理1;
-  実行される処理2;
-}
-
-関数の呼び出し
-関数名(引数1, 引数2, ...);
-
-関数から返された値を変数に代入
-変数 = 関数名(引数1, 引数2, ...);
-
-その他
-関数は関数呼び出しよりも前で定義しても後で定義しても構いません。 -->
-
-
-<!-- 関数から値を返すにはreturn文を使います。書式は次の通りです。
-
-return 戻り値;
-
-戻り値を保存するには「変数 = 関数名(引数)」のように変数に対して格納
-戻り値には数値や文字列などの他に配列など全ての値を指定可能
-
-ーーーーーーーーーーーーーーーーーーーーーーーーー
-
-関数の中でreturn文が実行されると戻り値を返すと共に関数内の処理をそこで終了します。つまりreturn文が実行されると処理は関数を呼び出した元に処理が移ります。
-
-戻り値として指定できる値は1つだけ
-ただし配列も指定が可能なので配列を使うことで実質的に複数の値を返すことも可能です。 -->
-
-
-      
-      <p> -----------------</p>
-
+      <!-- クラス名はアッパーキャメルケース -->
       <?php
-      /* function addition($num3, $num4) {
-        if ($num3 + $num4 == 24) {
-          return '24です';
-        } else {
-          return '24ではありません';
+      class Television {
+        public $channelNo;
+
+        function dispChannel() {
+          /* クラス内でメンバ変数にアクセスする*/
+          //【$this->メンバ変数名;】
+          print '現在のチャンネルは【'.$this->channelNo.'】です';
         }
       }
 
-      print '7 + 17 => '.addition(7, 17).'<br>';
-      print '5 + 5 => '.addition(5, 5).'<br>'; */
+      /* クラスからオブジェクトを作成 */
+      $tv = new Television();
+      /* クラスから作成したオブジェクトを使ってメンバ変数にアクセス */
+      // $オブジェクト名->メンバ変数名;
+      $tv -> channelNo = 1;
+      /* クラスから作成したオブジェクトを使ってメンバメソッドにアクセス */
+      // $オブジェクト名->メンバメソッド名();
+      $tv -> dispChannel();
+
+
       ?>
-
-      <p> -----------------</p>
-
-      
-
-      <?php
-      function subtraction($num5, $num6) {
-        if ($num5 - $num6 == 0) {
-          return '0です';
-        } elseif ($num5 - $num6 == 1) {
-          return'1です';
-        } elseif ($num5 - $num6 == 2) {
-          return '2です';
-        } elseif ($num5 - $num6 == 3) {
-          return '3です';
-        } elseif ($num5 - $num6 == 4) {
-          return '4です';
-        } elseif ($num5 - $num6 == 5) {
-          return '5です';
-        } elseif ($num5 - $num6 == 6) {
-          return '6です';
-        } elseif ($num5 - $num6 == 7) {
-          return '7です'; 
-        } else {
-          return '1~7以外です'; 
-        }
-      }
-
-      print '8 - 8 => '.subtraction(8, 8).'<br>';
-      print '8 - 7 => '.subtraction(8, 7).'<br>';
-      print '8 - 6 => '.subtraction(8, 6).'<br>';
-      print '8 - 5 => '.subtraction(8, 5).'<br>';
-      print '8 - 4 => '.subtraction(8, 4).'<br>';
-      print '8 - 3 => '.subtraction(8, 3).'<br>';
-      print '8 - 2 => '.subtraction(8, 2).'<br>';
-      print '8 - 1 => '.subtraction(8, 1).'<br>';
-      print '8 - 0 => '.subtraction(8, 0).'<br>';
-      ?>
-
-      
-
-      <!-- return文を複数記述し条件に応じて戻り値を変更する
-return文とswitch文
-
-【関数,return文,switch文】 -->
-
-      <?php
-      print '<br>';
-      print '【プレビュー】<br>';
-      print '-----------------<br>';
-      ?>
-
-      <?php
-      function addition1($num1, $num2) {
-        switch ($num1 + $num2) {
-        case 1:
-          print '合計 => 1です';
-          break;
-        case 2:
-          print '合計 => 2です';
-          break;
-        case 3:
-          print '合計 => 3です';
-          break;
-        case 4:
-          print '合計 => 4です';
-          break;
-        case 5:
-          print '合計 => 5です';
-          break;
-        default:
-          print '合計 => 6以上です';
-        }
-      }
-
-      addition1(0, 1);
-      print '<br>';
-      addition1(1, 1);
-      print '<br>';
-      addition1(2, 1);
-      print '<br>';
-      addition1(3, 1);
-      print '<br>';
-      addition1(4, 1);
-      print '<br>';
-      addition1(5, 1);
-      ?>
-
-      <br>
-
-      <?php
-      print '<br>';
-      print '【プレビュー】<br>';
-      print '-----------------<br>';
-      ?>
-
-      <?php
-      function addition2($num1, $num2) {
-        switch ($num1 + $num2) {
-        case 1:
-          return '合計 => 1です';
-          break;
-        case 2:
-          return '合計 => 2です';
-          break;
-        case 3:
-          return '合計 => 3です';
-          break;
-        case 4:
-          return '合計 => 4です';
-          break;
-        case 5:
-          return '合計 => 5です';
-          break;
-        default:
-          return '合計 => 6以上です';
-        }
-      }
-
-      print addition2(0, 1).'<br>';
-      print addition2(1, 1).'<br>';
-      print addition2(2, 1).'<br>';
-      print addition2(3, 1).'<br>';
-      print addition2(4, 1).'<br>';
-      print addition2(5, 1).'<br>';
-      ?>
-      
-      <br>
-
-      <?php
-      print '<br>';
-      print '【プレビュー】<br>';
-      print '-----------------<br>';
-      ?>
-
-
-      <?php
-      function multiple_of_7($num) {
-        return $num % 7 == 0 ? '７の倍数です' : '７の倍数ではありません';
-      }
-
-      $value1 = multiple_of_7(7);
-      $value2 = multiple_of_7(10);
-
-      print '値１は'.$value1.'<br>';
-      print '値２は'.$value2.'<br>';
-      ?>
-
-      
-
-
-
-<!-- return文を複数記述し条件に応じて戻り値を変更する
-return文とif文以外
- -->
-<!-- その次　配列を返す -->
       
       
         
