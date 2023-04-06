@@ -68,28 +68,34 @@
       print '【プレビュー】<br>';
       print '-----------------<br>';
       ?>
+      <!-- クラス内のメンバメソッドと引数 -->
 
       <!-- クラス名はアッパーキャメルケース -->
       <?php
       class Television {
+        /* メンバ変数(プロパティ【変数】) */
         public $channelNo;
 
+        function setChannel($channel) {
+          /* クラス内のメンバ変数とメンバメソッドにアクセスする */
+          $this -> channelNo = $channel;
+          $this -> dispChannel();
+        }
+
+        /* メンバメソッド(メソッド【関数】) */
         function dispChannel() {
           /* クラス内でメンバ変数にアクセスする*/
-          //【$this->メンバ変数名;】
           print '現在のチャンネルは【'.$this->channelNo.'】です';
         }
       }
 
       /* クラスからオブジェクトを作成 */
-      $tv = new Television();
-      /* クラスから作成したオブジェクトを使ってメンバ変数にアクセス */
-      // $オブジェクト名->メンバ変数名;
-      $tv -> channelNo = 1;
-      /* クラスから作成したオブジェクトを使ってメンバメソッドにアクセス */
-      // $オブジェクト名->メンバメソッド名();
-      $tv -> dispChannel();
+      $tv1 = new Television();
+      $tv2 = new Television();
 
+      /* メンバメソッドに値を渡す */
+      $tv1 -> setChannel(1);
+      $tv2 -> setChannel(2);
 
       ?>
       
