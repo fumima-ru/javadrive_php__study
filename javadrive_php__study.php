@@ -76,16 +76,16 @@
         /* メンバ変数(プロパティ【変数】) */
         public $channelNo;
 
+        /* メンバメソッド(メソッド【関数】) */
+        function dispChannel() {
+          /* クラス内でメンバ変数にアクセスする*/
+          print '現在のチャンネルは【'.$this->channelNo.'】です<br>';
+        }
+
         function setChannel($channel) {
           /* クラス内のメンバ変数とメンバメソッドにアクセスする */
           $this -> channelNo = $channel;
           $this -> dispChannel();
-        }
-
-        /* メンバメソッド(メソッド【関数】) */
-        function dispChannel() {
-          /* クラス内でメンバ変数にアクセスする*/
-          print '現在のチャンネルは【'.$this->channelNo.'】です';
         }
       }
 
@@ -96,7 +96,6 @@
       /* メンバメソッドに値を渡す */
       $tv1 -> setChannel(1);
       $tv2 -> setChannel(2);
-
       ?>
       
       
