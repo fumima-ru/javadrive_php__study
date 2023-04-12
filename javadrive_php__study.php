@@ -97,7 +97,49 @@
       $tv1 -> setChannel(1);
       $tv2 -> setChannel(2);
       ?>
-      
+
+      <?php
+      print '<br>';
+      print '【プレビュー】<br>';
+      print '-----------------<br>';
+      ?>
+
+     
+
+      <?php
+      print '<br>';
+      print '【プレビュー】<br>';
+      print '-----------------<br>';
+      ?>
+
+      <?php
+      class Character {
+        public $characterName;
+        public $color;
+        public $favorite;
+
+        private function selfIntroduction() {
+          print '名前：'.$this -> characterName.'<br>';
+          print '色：'.$this -> color.'<br>';
+          print $this -> favorite.'が大好きです<br>';
+          print '-----------------------------------------------------------<br>';
+        }
+
+        function setProfile($name, $color, $favorite) {
+          $this -> characterName = $name;
+          $this -> color = $color;
+          $this -> favorite = $favorite;
+          $this -> selfIntroduction();
+        }
+
+      }
+
+      $rilakkuma = new Character();
+      $rilakkuma -> setProfile('リラックマ', '茶色', 'ホットケーキ、オムライス、プリン、だんご' );
+
+      $korilakkuma = new Character();
+      $korilakkuma -> setProfile('コリラックマ', '白', 'いちご、リンゴ、さくらんぼ');
+      ?>
       
         
       </main>
