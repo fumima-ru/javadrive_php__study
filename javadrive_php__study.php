@@ -69,42 +69,8 @@
       print '-----------------<br>';
       ?>
       <!-- クラス内のメンバメソッドと引数 -->
-
       <!-- クラス名はアッパーキャメルケース -->
-      <?php
-      class Television {
-        /* メンバ変数(プロパティ【変数】) */
-        public $channelNo;
-
-        /* メンバメソッド(メソッド【関数】) */
-        function dispChannel() {
-          /* クラス内でメンバ変数にアクセスする*/
-          print '現在のチャンネルは【'.$this->channelNo.'】です<br>';
-        }
-
-        function setChannel($channel) {
-          /* クラス内のメンバ変数とメンバメソッドにアクセスする */
-          $this -> channelNo = $channel;
-          $this -> dispChannel();
-        }
-      }
-
-      /* クラスからオブジェクトを作成 */
-      $tv1 = new Television();
-      $tv2 = new Television();
-
-      /* メンバメソッドに値を渡す */
-      $tv1 -> setChannel(1);
-      $tv2 -> setChannel(2);
-      ?>
-
-      <?php
-      print '<br>';
-      print '【プレビュー】<br>';
-      print '-----------------<br>';
-      ?>
-
-     
+      
 
       <?php
       print '<br>';
@@ -140,6 +106,54 @@
       $korilakkuma = new Character();
       $korilakkuma -> setProfile('コリラックマ', '白', 'いちご、リンゴ、さくらんぼ');
       ?>
+
+      <?php
+      print '<br>';
+      print '【プレビュー】<br>';
+      print '-----------------<br>';
+      ?>
+
+      <?php
+      class Television {
+        private $channelNo = 1;
+
+        function setChannel($channel) {
+          if (($channel >= 1) and ($channel <= 12)) {
+            $this -> channelNo = $channel;
+            print '現在のチャンネルは'.$this -> getChannel().'です。<br>';
+          } else {
+            print 'チャンネルは1から12の間で設定して下さい。<br>';
+          }
+        }
+
+        private function getChannel() {
+          return $this -> channelNo;
+        }
+      }
+
+      $tv1 = new Television();
+
+      $tv1 -> setChannel(10);
+      $tv1 -> setChannel(50);
+      ?>
+
+
+      <br><br><br>
+
+      <?php
+
+      ?>
+<!-- クラス　クラス内の定数からスタート -->
+      <!-- PHPの定数　define(識別子, 値);
+クラス内の定数　const 定数名 = 値;
+
+クラス内からこの定数の値を参照するには"self::定数名"(「self」はカレントクラスを表します。)
+クラス内でメンバ変数にアクセスするには"this"を使って下記のように記述します。
+$this->メンバ変数名; 
+
+「$this」はオブジェクト毎ですけど「self」はクラスとして考える場合に使います。定数はオブジェクト毎ではなくクラス単位で設定されている値だからです。
+-->
+
       
         
       </main>
