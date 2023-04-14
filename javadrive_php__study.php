@@ -113,49 +113,66 @@
       print '-----------------<br>';
       ?>
 
-      <?php
-      class Television {
-        private $channelNo = 1;
 
-        function setChannel($channel) {
-          if (($channel >= 1) and ($channel <= 12)) {
-            $this -> channelNo = $channel;
-            print '現在のチャンネルは'.$this -> getChannel().'です。<br>';
+      <h1>【お手本】</h1>
+      <?php
+      $tv = new TelevisionOrigin();
+
+      $tv -> setChannelOrigin(20);
+      print '現在のチャンネルは'.$tv -> getChannelOrigin().'です<br>';
+
+      $tv -> setChannelOrigin(10);
+      print '現在のチャンネルは'.$tv -> getChannelOrigin().'です<br>';
+
+      class TelevisionOrigin {
+        private $channelNo = 8;
+
+        const MAX_CHANNEL = 12;
+        const MIN_CHANNEL = 1;
+        const ERROR_MSG = 'チャンネルは1から12の間で設定してください<br>';
+        
+        function setChannelOrigin($channel_origin) {
+          if (($channel_origin >= self::MIN_CHANNEL) and ($channel_origin <= self::MAX_CHANNEL)) {
+            $this -> channelNo = $channel_origin;
           } else {
-            print 'チャンネルは1から12の間で設定して下さい。<br>';
+            print self::ERROR_MSG;
           }
         }
 
-        private function getChannel() {
+        function getChannelOrigin() {
           return $this -> channelNo;
         }
       }
-
-      $tv1 = new Television();
-
-      $tv1 -> setChannel(10);
-      $tv1 -> setChannel(50);
       ?>
 
-
-      <br><br><br>
-
+      <h1>【テスト】</h1>
       <?php
+      class Television {
+        private $channelNo = 10;
 
+        // 定数名は大文字で記述
+        const MIN_CHANNEL = 1;
+        const MAX_CHANNEL = 12;
+        const ERROR_MSG = 'チャンネルは'.self::MIN_CHANNEL.'から'.self::MAX_CHANNEL.'の間で設定してください<br>';
+
+        function setChannel($channel) {
+          if (($channel >= self::MIN_CHANNEL) and ($channel <= self::MAX_CHANNEL)) {
+            $this -> channelNo = $channel;
+            print '現在のチャンネルは'.$this -> channelNo.'です<br>';
+          } else {
+            print self::ERROR_MSG;
+            print '現在のチャンネルは'.$this -> channelNo.'です<br>';
+          }
+        }
+      }
+
+      $tv = new Television();
+
+      $tv -> setChannel(7);
+      $tv -> setChannel(70);
       ?>
-<!-- クラス　クラス内の定数からスタート -->
-      <!-- PHPの定数　define(識別子, 値);
-クラス内の定数　const 定数名 = 値;
-
-クラス内からこの定数の値を参照するには"self::定数名"(「self」はカレントクラスを表します。)
-クラス内でメンバ変数にアクセスするには"this"を使って下記のように記述します。
-$this->メンバ変数名; 
-
-「$this」はオブジェクト毎ですけど「self」はクラスとして考える場合に使います。定数はオブジェクト毎ではなくクラス単位で設定されている値だからです。
--->
 
       
-        
       </main>
         
       
@@ -172,12 +189,4 @@ $this->メンバ変数名;
 
 <!-- 変数の前に「&」を付けることで要素の値に対する参照を設定することができます。 -->
 <!-- PHPのコーディング規約に
-インデントは半角スペース4つというルールがある
-
-
-関数を作るには「function 関数名(){ 処理 }」という書き方をします。
-関数名は自由につけることが出来ます
-関数は「関数名()」というように()をつけて呼び出すことができます
-
-配列と関数
-変数定数-->
+インデントは半角スペース4つというルールがある-->
