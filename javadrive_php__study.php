@@ -113,66 +113,99 @@
       print '-----------------<br>';
       ?>
 
-
-      <h1>【お手本】</h1>
       <?php
-      $tv = new TelevisionOrigin();
+      class Television1 {
+        private $channelNo1;
 
-      $tv -> setChannelOrigin(20);
-      print '現在のチャンネルは'.$tv -> getChannelOrigin().'です<br>';
+        function init($channel) {
+          $this -> channelNo1 = $channel;
+        }
 
-      $tv -> setChannelOrigin(10);
-      print '現在のチャンネルは'.$tv -> getChannelOrigin().'です<br>';
+        function getChannel1() {
+          return $this -> channelNo1;
+        }
+      }
 
-      class TelevisionOrigin {
-        private $channelNo = 8;
-
-        const MAX_CHANNEL = 12;
-        const MIN_CHANNEL = 1;
-        const ERROR_MSG = 'チャンネルは1から12の間で設定してください<br>';
+      $tv = new Television1();
+      $tv -> init(7);
+      print $tv -> getChannel1().'です<br>';
         
-        function setChannelOrigin($channel_origin) {
-          if (($channel_origin >= self::MIN_CHANNEL) and ($channel_origin <= self::MAX_CHANNEL)) {
-            $this -> channelNo = $channel_origin;
-          } else {
-            print self::ERROR_MSG;
-          }
-        }
-
-        function getChannelOrigin() {
-          return $this -> channelNo;
-        }
-      }
       ?>
 
-      <h1>【テスト】</h1>
       <?php
-      class Television {
-        private $channelNo = 10;
+      class Television2 {
+        private $channelNo2;
 
-        // 定数名は大文字で記述
-        const MIN_CHANNEL = 1;
-        const MAX_CHANNEL = 12;
-        const ERROR_MSG = 'チャンネルは'.self::MIN_CHANNEL.'から'.self::MAX_CHANNEL.'の間で設定してください<br>';
+        function __construct($channel2) {
+          $this -> channelNo2 = $channel2;
+        }
 
-        function setChannel($channel) {
-          if (($channel >= self::MIN_CHANNEL) and ($channel <= self::MAX_CHANNEL)) {
-            $this -> channelNo = $channel;
-            print '現在のチャンネルは'.$this -> channelNo.'です<br>';
-          } else {
-            print self::ERROR_MSG;
-            print '現在のチャンネルは'.$this -> channelNo.'です<br>';
-          }
+        function getChannel2() {
+          return $this -> channelNo2;
         }
       }
 
-      $tv = new Television();
-
-      $tv -> setChannel(7);
-      $tv -> setChannel(70);
+      $tv2 = new Television2(10);
+      print $tv2 -> getChannel2().'です<br>';
       ?>
 
-      
+      <?php
+      print '<br>';
+      print '【プレビュー】<br>';
+      print '-----------------<br>';
+      ?>
+
+      <?php
+      class Fruits {
+        private $name;
+        private $color;
+        private $arrival_quantity;
+
+        function __construct($name, $color, $arrival_quantity) {
+          $this -> name = $name;
+          $this -> color = $color;
+          $this -> arrival_quantity = $arrival_quantity;
+          $this -> print();
+        }
+
+        private function print() {
+          print $this -> name.'は'.$this -> color.'色です。<br>';
+          print $this -> arrival_quantity.'個入荷しました。<br>';
+        }
+
+        function getValue() {
+          return [$this -> name, $this -> color, $this -> arrival_quantity];
+        }
+      }
+
+      /* オブジェクトを生成 */
+      $apple = new Fruits('りんご', '赤', 1);
+
+      /* print_r関数で要素の一覧を出力 */
+      print_r ($apple -> getValue());
+      print '<br>';
+
+      /* 配列を変数に代入 キーを指定して要素を出力 */
+      $apple_array = $apple -> getValue();
+      print '１つ目の要素：'.$apple_array[0].'<br>';
+      print '２つ目の要素：'.$apple_array[1].'<br>';
+      print '３つ目の要素：'.$apple_array[2].'<br>';
+      print '<br>';
+      print '------------------------------------------------<br>';
+
+      $grape = new Fruits('ぶどう', '紫', 5);
+      print_r ($grape -> getValue());
+
+
+      print '<br>';
+      print '------------------------------------------------<br>';
+
+      $banana = new Fruits('ばなな', '黄', 10);
+      print_r ($banana -> getValue());
+      print '<br>';
+      print '------------------------------------------------<br>';
+      ?>
+
       </main>
         
       
